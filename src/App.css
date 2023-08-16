@@ -32,6 +32,11 @@ body {
 .btn-primary:hover {
   background: var(--primaryColor);
 }
+.loading {
+  text-transform: capitalize;
+  text-align: center;
+  margin-top: 3rem;
+}
 /* end Global */
 
 /* Navbar */
@@ -47,14 +52,15 @@ body {
 .nav-header {
   display: flex;
   justify-content: space-between;
+  padding-top: 10px;
 }
 .logo-link, .nav-btn{
-  color:#295d09;
+  color: var(--primaryColor);
   font-size: 1.5rem;
   cursor: pointer;
 }
 .logo-link:hover, .nav-btn:hover{
-  color: #69ab3d;
+  color: var(--secondaryColor);
 }
 .nav-links {
   height: 0;
@@ -92,7 +98,7 @@ body {
   }
   .nav-links a {
     margin: 0 1rem;
-    padding: 0.5rem 0;
+    padding: 0.6rem 0;
   }
 }
 /* end of navbar */
@@ -131,7 +137,6 @@ footer {
   padding: 2rem 1rem;
   text-align: center;
   text-transform: capitalize;
-  letter-spacing: var(--mainSpacing);
 }
 .banner h1 {
   font-size: 2.5rem;
@@ -147,3 +152,60 @@ footer {
   margin-bottom: 2rem;
 }
 /* end of Banner */
+
+/* Title */
+.section-title {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+.section-title h4 {
+  font-size: 2rem;
+  text-transform: capitalize;
+  margin-bottom: 1rem;
+}
+.section-title div {
+  width: 5rem;
+  height: 5px;
+  margin: 0 auto;
+  background: var(--primaryColor);
+}
+/* end of Title */
+
+/* services */
+.services {
+  padding: 5rem 0;
+}
+.services {
+  background: var(--offWhite);
+  text-align: center;
+}
+.services-center {
+  width: 90vw;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(255px, 1fr));
+  grid-row-gap: 2rem;
+  grid-column-gap: 50px;
+}
+.service span {
+  display: inline-block;
+  color: var(--primaryColor);
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+}
+.services p {
+  width: 80%;
+  margin: 0 auto;
+}
+@media screen and (min-width: 992px) {
+  .services-center {
+    width: 95vw;
+    max-width: 1170px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .services p {
+    width: 100%;
+  }
+}
+/*end of services */
