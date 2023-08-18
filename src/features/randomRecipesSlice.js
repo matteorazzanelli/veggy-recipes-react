@@ -10,7 +10,7 @@ const initialState = {
 
 export const fetchRandomRecipes = createAsyncThunk(
   'posts/fetchRandomRecipes', async () => {
-    const response = await Request.getRandomrecipes(2);
+    const response = await Request.getRandomrecipes(1);
     return response
   }
 )

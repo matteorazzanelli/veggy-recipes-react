@@ -25,14 +25,13 @@ export default function RandomRecipes() {
     if(randomRecipesStatus === 'idle'){
       dispatch(fetchRandomRecipes()) // FIXME: called twice
     }
-    console.log('recipes : ',randomRecipes)
   },[randomRecipesStatus, dispatch])
 
   let content;
   if (randomRecipesStatus === 'loading') {
     content = <Loading/>;
   } else if (randomRecipesStatus === 'succeeded') {
-    console.log('single recipeeeeeeeeeeeeeeeeeeee')
+    console.log(randomRecipes)
     content = randomRecipes.map(
       (item) => {
         return <RecipeCard key={item.id} title={item.title} id={item.id} image={item.image}/>
