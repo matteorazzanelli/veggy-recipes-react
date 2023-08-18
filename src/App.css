@@ -13,6 +13,9 @@
   --mainBlack: #313131;
 
   --mainTransition: all 0.3s linear;
+
+  --lightShadow: 2px 5px 3px 0px rgba(0, 0, 0, 0.5);
+  --darkShadow: 4px 10px 5px 0px rgba(0, 0, 0, 0.5);
 }
 body {
   padding-top: 66px;
@@ -174,8 +177,6 @@ footer {
 /* services */
 .services {
   padding: 5rem 0;
-}
-.services {
   background: var(--offWhite);
   text-align: center;
 }
@@ -209,3 +210,59 @@ footer {
   }
 }
 /*end of services */
+
+.recipe-container {
+  /* border: 4px solid var(--primaryColor); */
+  border-radius: 8px;
+  display: flex;
+  flex-direction: row;
+  justify-content:space-around;
+  flex-wrap: wrap;
+}
+.recipe-card {
+  width: 300px;
+  font-size: 2rem;
+  border-radius: 8px;
+  /* box-shadow: var(--lightShadow); */
+  transition: var(--mainTransition);
+  padding: 10px;
+}
+.img-container {
+  border-radius: 8px 8px 0 0;
+  position: relative;
+  width: 100%;
+}
+.img-container img {
+  border-radius: 8px 8px 0 0;
+  display: block;
+  width: 100%;
+  transition: var(--mainTransition);
+}
+.img-container:hover .recipe-link {
+  transform: translate(-50%, -50%) scale(1);
+}
+.img-container:touchstart .recipe-link {
+  transform: translate(-50%, -50%) scale(1);
+}
+.img-container:hover {
+  background: rgba(0, 0, 0, 0.8);
+}
+.img-container:hover img {
+  opacity: 0.3;
+}
+.recipe-link {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: scale(0);
+  transition: all 0.3s linear;
+}
+.recipe-title {
+  background: var(--secondaryColor);
+  color: var(--mainBlack);
+  padding: 0.5rem 0;
+  text-align: center;
+  font-size: 1.5rem;
+  border-radius: 0 0 8px 8px;
+  height: 40px;
+}
