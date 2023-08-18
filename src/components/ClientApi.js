@@ -16,8 +16,12 @@ class ClientApi {
     this.apiKey = process.env.REACT_APP_API_KEY
   }
 
-  async getRandomrecipes(number_of_recipes){
+  async getRandomRecipes(number_of_recipes){
     return (await this.api.get(`random?apiKey=${this.apiKey}&number=${number_of_recipes}`)).data.recipes;
+  }
+
+  async getSearchedRecipes(value, intolerance, protein, vegan){
+    return (await this.api.get(`complexSearch?${this.apiKey}&query=${value}&intolerances=${intolerance}&maxProtein=${protein}`)).data.recipes;
   }
 }
 
