@@ -260,9 +260,7 @@ footer {
 .recipe-title {
   background: var(--secondaryColor);
   color: var(--mainBlack);
-  padding: 0.5rem 0;
   text-align: center;
-  font-size: 1.5rem;
+  font-size: 1.1rem;
   border-radius: 0 0 8px 8px;
-  height: 40px;
 }
