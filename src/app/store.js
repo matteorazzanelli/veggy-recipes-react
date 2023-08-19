@@ -1,14 +1,11 @@
 import { configureStore } from "@reduxjs/toolkit";
 
 import randomRecipesReducer from '../features/randomRecipesSlice';
-// import filteredRecipesReducer from '../features/recipesSlice';
-// import searchFiltersReducer from '../features/recipesSlice';
+import searchedRecipesReducer from '../features/searchedRecipesSlice';
 
 export const store = configureStore({
     reducer: {
-      randomRecipes: randomRecipesReducer
-      // ,
-      // filteredRecipes: filteredRecipesReducer,
-      // searchFilters: searchFiltersReducer
+      randomRecipes: randomRecipesReducer,
+      searchedRecipes: searchedRecipesReducer
     }
 })
