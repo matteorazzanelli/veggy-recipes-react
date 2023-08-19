@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 
 import { useState } from 'react';
 
@@ -8,34 +8,32 @@ import Request from './ClientApi';
 
 export default function Filters() {
 
-  const [search, setSearch] = useState("")
-  const [intolerance, setIntolerance] = useState("");
+  const [query, setQuery] = useState(``)
+  const [intolerance, setIntolerance] = useState(``);
   const [protein, setProtein] = useState(100);
   const [vegan, setVegan] = useState(false);
 
   const [searchedRecipes, setSearchedRecipes] = useState([])
 
-  const handleSubmitForm = (e) => {
+  let results;
+
+  const handleSubmitForm = async (e) => {
     e.preventDefault();
-    console.log(
-      search,
-      intolerance,
-      protein,
-      vegan
-    )
-    const results = Request.getSearchedRecipes(search, intolerance, protein, vegan);
+    const diet = vegan ? "vegan" : "vegetarian";
+    results = await Request.getSearchedRecipes(query, intolerance, protein, diet);
     setSearchedRecipes(results)
+    console.log(results)
   }
 
   return (
     <div className="filter-form">
-      {/* Free search */}
+      {/* Free query */}
       <div className='filter-form-text'>
         <LuSearch></LuSearch>
         <input 
           type='text'
-          value={search}
-          onChange={(e) => setSearch(e.target.value)}
+          value={query}
+          onChange={(e) => setQuery(e.target.value)}
         />
       </div>
 
@@ -72,13 +70,13 @@ export default function Filters() {
 
       {/* Protein */}
       <div className="filter-form-protein">
-        <label htmlFor="minProtein">
+        <label htmlFor="maxProtein">
           <h5>Max protein : {protein}</h5>
         </label>
         <input
           type="range"
-          name="minProtein"
-          min="1"
+          name="maxProtein"
+          min="0"
           max="100"
           value={protein}
           onChange={(e) => setProtein(e.target.value)}        
