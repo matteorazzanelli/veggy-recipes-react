@@ -10,7 +10,7 @@ const initialState = {
 
 export const fetchRandomRecipes = createAsyncThunk(
   'posts/fetchRandomRecipes', async () => {
-    const response = await Request.getRandomrecipes(1);
+    const response = await Request.getRandomRecipes(1);
     return response
   }
 )
@@ -36,9 +36,7 @@ const randomRecipesSlice = createSlice({
 })
 
 export const selectAllRandomRecipes = (state) => state.randomRecipes.recipes;
-export const getRandomrecipesStatus = (state) => state.randomRecipes.status;
-export const getRandomrecipesError = (state) => state.randomRecipes.error;
-
-export const { addRandomRecipe } = randomRecipesSlice.actions
+export const getRandomRecipesStatus = (state) => state.randomRecipes.status;
+export const getRandomRecipesError = (state) => state.randomRecipes.error;
 
 export default randomRecipesSlice.reducer

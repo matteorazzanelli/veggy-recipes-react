@@ -3,8 +3,8 @@ import React, { useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux';
 import { 
   selectAllRandomRecipes,
-  getRandomrecipesStatus,
-  getRandomrecipesError,
+  getRandomRecipesStatus,
+  getRandomRecipesError,
   fetchRandomRecipes
  } from '../features/randomRecipesSlice';
 
@@ -17,8 +17,8 @@ export default function RandomRecipes() {
   const dispatch = useDispatch();
   
   const randomRecipes = useSelector(selectAllRandomRecipes);
-  const randomRecipesStatus = useSelector(getRandomrecipesStatus);
-  const randomRecipesError = useSelector(getRandomrecipesError);
+  const randomRecipesStatus = useSelector(getRandomRecipesStatus);
+  const randomRecipesError = useSelector(getRandomRecipesError);
   
   useEffect(()=>{
     console.log('inside use effect : ', randomRecipesStatus)
