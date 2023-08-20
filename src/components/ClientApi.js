@@ -20,7 +20,8 @@ class ClientApi {
     return (await this.api.get(`random?apiKey=${this.apiKey}&number=${number_of_recipes}`)).data.recipes;
   }
 
-  async getSearchedRecipes(value, intolerance, protein, diet){
+  async getSearchedRecipes(value, intolerance, protein, vegan){
+    let diet = vegan ? 'vegan' : 'vegetarian';
     return  (await this.api.get(`complexSearch?apiKey=${this.apiKey}&query=${value}&intolerances=${intolerance}&maxProtein=${protein}&diet=${diet}&number=10`)).data.results;
   }
 }
