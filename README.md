@@ -1,12 +1,48 @@
-# Getting Started with Create React App
+[![Issues][issues-shield]][issues-url]
+[![LinkedIn][linkedin-shield]][linkedin-url]
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<!-- PROJECT LOGO -->
+<br />
+<div align="center">
+  <h3 align="center">React - Food</h3>
+  <img src="app.png" alt="Screenshot">
+  <p align="center">Project created for <strong>Start2Impact</strong> course: <em>React project</em></p>
+</div>
 
-## Available Scripts
+### Built With
 
-In the project directory, you can run:
+* [HTML 5](https://developer.mozilla.org/en-US/docs/Glossary/HTML)
+* [CSS 3](https://developer.mozilla.org/en-US/docs/Web/CSS)
+* [Javascript](https://www.javascript.com/)
+* [React](https://react.dev/)
+* [Create React App](https://github.com/facebook/create-react-app)
 
-### `npm start`
+<!-- TABLE OF CONTENTS -->
+<details open="open">
+  <summary>Table of Contents</summary>
+  <ol>
+    <li><a href="#getting-started">Getting Started</a></li>
+    <li><a href="#usage">Usage</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ol>
+</details>
+
+<!-- GETTING STARTED -->
+## Getting Started
+
+1. Clone the repo
+
+```sh
+git clone https://github.com/matteorazzanelli/veggy-recipes-react.git
+```
+
+2. Rename the .env.sample in .env file and paste your api key from spoonacular there
+
+3. Go to project folder and type
+
+```sh
+npm install && npm start
+```
 
 Runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
@@ -14,57 +50,36 @@ Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 The page will reload when you make changes.\
 You may also see any lint errors in the console.
 
-### `npm test`
+4. Type
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+```sh
+npm run build
+```
 
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
+To builds the app for production to the `build` folder.\
 It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+<!-- USAGE -->
+## Usage
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- Simply press the "Go to the recipes" button and set your filters
+- Then press "Go" and wait for your results
+- Click for more info on a single recipe and taste it!
 
-### `npm run eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+<!-- CONTACT -->
+## Link & Contact
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Matteo Razzanelli - matteo.razzanelli89@gmail.it
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+Start2impact personal page - https://talent.start2impact.it/profile/matteo-razzanelli
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+Project Repository: [React - Food App](https://github.com/matteorazzanelli/veggy-recipes-react)
 
-## Learn More
+Try the app [here](https://64e228e37de90c72216c41de--famous-pudding-8a97a4.netlify.app/)
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+<!-- MARKDOWN LINKS & IMAGES -->
+[issues-shield]: https://img.shields.io/github/issues/matteorazzanelli/kreas-food-php/repo.svg?style=for-the-badge
+[issues-url]: https://github.com/matteorazzanelli/veggy-recipes-react/issues
+[linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
+[linkedin-url]: https://www.linkedin.com/in/matteo-razzanelli/
