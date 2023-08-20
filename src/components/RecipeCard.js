@@ -7,7 +7,7 @@ export default function RecipeCard({ title, id, image }) {
   return (
     <article className="recipe-card">
       <div className="img-container">
-        <img src={image || "../img/defaultImg.jpg"} alt="" />
+        <img src={image || "../images/defaultImg.jpg"} alt="" />
 
         <Link to={`/recipes/${id}`} className="btn-primary recipe-link">
           More
