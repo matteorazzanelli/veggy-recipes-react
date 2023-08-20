@@ -21,7 +21,7 @@ export default function RandomRecipes() {
   const randomRecipesError = useSelector(getRandomRecipesError);
   
   useEffect(()=>{
-    console.log('inside use effect : ', randomRecipesStatus)
+    console.log('inside use effect random : ', randomRecipesStatus)
     if(randomRecipesStatus === 'idle'){
       dispatch(fetchRandomRecipes()) // FIXME: called twice
     }
