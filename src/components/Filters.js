@@ -1,29 +1,38 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 
-import { useState } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+import {
+  selectAllOptionsRecipes,
+  addFilters,
+  fetchSearchedRecipes
+} from '../features/searchedRecipesSlice';
 
 import { LuSearch } from 'react-icons/lu';
 
-import Request from './ClientApi';
-
 export default function Filters() {
 
+  const dispatch = useDispatch();
+
+  const optionsRecipes = useSelector(selectAllOptionsRecipes)
+  
   const [query, setQuery] = useState(``)
   const [intolerance, setIntolerance] = useState(``);
   const [protein, setProtein] = useState(100);
   const [vegan, setVegan] = useState(false);
 
-  const [searchedRecipes, setSearchedRecipes] = useState([])
-
-  let results;
-
-  const handleSubmitForm = async (e) => {
+  const handleSubmitForm = (e) => {
     e.preventDefault();
-    const diet = vegan ? "vegan" : "vegetarian";
-    results = await Request.getSearchedRecipes(query, intolerance, protein, diet);
-    setSearchedRecipes(results)
-    console.log(results)
+    dispatch(addFilters({query, intolerance, protein, vegan}));
+    dispatch(fetchSearchedRecipes({query, intolerance, protein, vegan}));
   }
+
+  useEffect(()=>{
+    console.log(optionsRecipes)
+    setQuery(optionsRecipes.query)
+    setIntolerance(optionsRecipes.intolerance)
+    setProtein(optionsRecipes.protein)
+    setVegan(optionsRecipes.vegan)
+  },[optionsRecipes])
 
   return (
     <div className="filter-form">
@@ -52,7 +61,7 @@ export default function Filters() {
       {/* Intolerance */}
       <div className="filter-form-intolerance">
         <h5>Intolerances</h5>
-        <select onChange={(e) => setIntolerance(e.target.value)}>
+        <select value={intolerance} onChange={(e) => setIntolerance(e.target.value)}>
           <option value="All">--</option>
           <option value="Dairy">Dairy</option>
           <option value="Gluten">Gluten</option>
