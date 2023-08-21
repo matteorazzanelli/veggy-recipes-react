@@ -3,6 +3,8 @@ import React from 'react'
 import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
 
+import './RecipeCard.css'
+
 export default function RecipeCard({ title, id, image }) {
   return (
     <article className="recipe-card">

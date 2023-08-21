@@ -8,9 +8,9 @@ class ClientApi {
     this.api = axios.create({
       baseURL: "https://api.spoonacular.com/recipes/",
       params: {
-        addRecipeInformation: true,
-        diet: "vegetarian",
-        responseType: "json",
+        addRecipeInformation: process.env.REACT_APP_RECIPE_INFO === "true" ? true : false,
+        diet: process.env.REACT_APP_DIET,
+        responseType: process.env.REACT_APP_RESPONSE_TYPE,
       },
     });
     this.apiKey = process.env.REACT_APP_API_KEY

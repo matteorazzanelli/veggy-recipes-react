@@ -4,8 +4,11 @@ import { useDispatch, useSelector } from 'react-redux';
 import {
   selectAllOptionsRecipes,
   addFilters,
-  fetchSearchedRecipes
-} from '../features/searchedRecipesSlice';
+  fetchSearchedRecipes,
+  getSearchedRecipesStatus
+} from '../../features/searchedRecipesSlice';
+
+import './Filters.css'
 
 import { LuSearch } from 'react-icons/lu';
 
@@ -13,12 +16,15 @@ export default function Filters() {
 
   const dispatch = useDispatch();
 
-  const optionsRecipes = useSelector(selectAllOptionsRecipes)
+  const optionsRecipes = useSelector(selectAllOptionsRecipes);
+  const searchedRecipesStatus = useSelector(getSearchedRecipesStatus);
   
   const [query, setQuery] = useState(``)
   const [intolerance, setIntolerance] = useState(``);
   const [protein, setProtein] = useState(100);
   const [vegan, setVegan] = useState(false);
+
+  const [disableForm, setDisbaleForm] = useState(false);
 
   const handleSubmitForm = (e) => {
     e.preventDefault();
@@ -32,7 +38,11 @@ export default function Filters() {
     setIntolerance(optionsRecipes.intolerance)
     setProtein(optionsRecipes.protein)
     setVegan(optionsRecipes.vegan)
-  },[optionsRecipes])
+
+    setDisbaleForm(()=>{
+      return searchedRecipesStatus === 'loading'
+    })
+  },[optionsRecipes, searchedRecipesStatus])
 
   return (
     <div className="filter-form">
@@ -43,6 +53,7 @@ export default function Filters() {
           type='text'
           value={query}
           onChange={(e) => setQuery(e.target.value)}
+          disabled={disableForm}
         />
       </div>
 
@@ -54,6 +65,7 @@ export default function Filters() {
           id="vegan"
           checked={vegan}
           onChange={(e) => setVegan(e.target.checked)}
+          disabled={disableForm}
         />
         <label htmlFor="vegan">Vegan</label>
       </div>
@@ -61,7 +73,7 @@ export default function Filters() {
       {/* Intolerance */}
       <div className="filter-form-intolerance">
         <h5>Intolerances</h5>
-        <select value={intolerance} onChange={(e) => setIntolerance(e.target.value)}>
+        <select value={intolerance} onChange={(e) => setIntolerance(e.target.value)} disabled={disableForm}>
           <option value="All">--</option>
           <option value="Dairy">Dairy</option>
           <option value="Gluten">Gluten</option>
@@ -88,7 +100,8 @@ export default function Filters() {
           min="0"
           max="100"
           value={protein}
-          onChange={(e) => setProtein(e.target.value)}        
+          onChange={(e) => setProtein(e.target.value)}
+          disabled={disableForm}        
         />
       </div>
 
@@ -96,6 +109,7 @@ export default function Filters() {
       <button 
         className='btn-primary'
         onClick={handleSubmitForm}
+        disabled={disableForm}
       >
         Go
       </button>

@@ -6,9 +6,9 @@ import { selectAllRandomRecipes } from '../features/randomRecipesSlice';
 import { selectAllSearchedRecipes } from "../features/searchedRecipesSlice";
 
 import Error from "./Error";
-import Loading from "../components/Loading";
 
 import styled from "styled-components"
+import { Helmet } from "react-helmet-async";
 
 export default function SingleRecipe() {
 
@@ -42,7 +42,11 @@ export default function SingleRecipe() {
   }
 
   return (
-    <>   
+    <>
+      <Helmet>
+        <title>How to prepare?</title>
+        <meta name='description' content='Follow the step by step preocedure to cook your veggy recipe.' />
+      </Helmet>
       <DeatilsWrapper>
         <div>
           <h2>{activeRecipe.title}</h2>
@@ -77,7 +81,7 @@ export default function SingleRecipe() {
         </Info>
       </DeatilsWrapper>
       <div>
-        <a href={activeRecipe.sourceUrl} target="_blank">
+        <a href={activeRecipe.sourceUrl} target="_blank" rel="noreferrer">
           <button className="btn-primary">More Info</button>
         </a>
       </div>

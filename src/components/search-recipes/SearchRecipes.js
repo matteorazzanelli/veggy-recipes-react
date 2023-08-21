@@ -1,8 +1,8 @@
 import React from 'react'
 
-import Filters from './Filters'
-import Title from './Title'
-import FilteredRecipes from './FilteredRecipes'
+import Filters from '../filters/Filters'
+import Title from '../title/Title'
+import FilteredRecipes from '../filtered-recipes/FilteredRecipes'
 
 export default function SearchRecipes() {
   return (

@@ -2,7 +2,9 @@ import React from 'react'
 
 import { LuVegan, LuListChecks, LuLightbulb, LuSearch } from 'react-icons/lu'  
 
-import Title from '../components/Title'
+import './Features.css'
+
+import Title from '../../components/title/Title'
 
 export default function Features() {
 

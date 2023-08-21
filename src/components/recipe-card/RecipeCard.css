@@ -1,0 +1,47 @@
+/* recipes */
+.recipe-card {
+  width: 300px;
+  font-size: 2rem;
+  border-radius: 8px;
+  /* box-shadow: var(--lightShadow); */
+  transition: var(--mainTransition);
+  padding: 10px;
+}
+.img-container {
+  border-radius: 8px 8px 0 0;
+  position: relative;
+  width: 100%;
+}
+.img-container img {
+  border-radius: 8px 8px 0 0;
+  display: block;
+  width: 100%;
+  transition: var(--mainTransition);
+}
+.img-container:hover .recipe-link {
+  transform: translate(-50%, -50%) scale(1);
+}
+.img-container:touchstart .recipe-link {
+  transform: translate(-50%, -50%) scale(1);
+}
+.img-container:hover {
+  background: rgba(0, 0, 0, 0.8);
+}
+.img-container:hover img {
+  opacity: 0.3;
+}
+.recipe-link {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: scale(0);
+  transition: all 0.3s linear;
+}
+.recipe-title {
+  background: var(--secondaryColor);
+  color: var(--mainBlack);
+  text-align: center;
+  font-size: 1.1rem;
+  border-radius: 0 0 8px 8px;
+}
+/*end of recipes */

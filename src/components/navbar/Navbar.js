@@ -4,6 +4,8 @@ import { Link } from "react-router-dom";
 import { GiKnifeFork } from "react-icons/gi";
 import { FaAlignRight } from "react-icons/fa";
 
+import './Navbar.css'
+
 export default function Navbar() {
 
   const [showNav, setShowNav] = useState(false);

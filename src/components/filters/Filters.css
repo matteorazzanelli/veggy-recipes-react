@@ -1,0 +1,19 @@
+/* Filter form */
+.search-recipes {
+  padding: 5rem 0;
+  background: var(--offWhite);
+  text-align: center;
+}
+.filter-form{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-bottom: 5rem;
+}
+
+.filter-form-text, .filter-form-vegan, .filter-form-intolerance, .filter-form-protein{
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
