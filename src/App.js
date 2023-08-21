@@ -11,11 +11,12 @@ import Recipes from "./pages/Recipes";
 import SingleRecipe from "./pages/SingleRecipe";
 import Error from "./pages/Error";
 
-
+import { HelmetProvider } from 'react-helmet-async';
+const helmetContext = {};
 
 function App() {
   return (
-    <>
+    <HelmetProvider context={helmetContext}>
       <Navbar />
       <Routes>
         <Route exact path="/" element={<Home/>} />
@@ -24,7 +25,7 @@ function App() {
         <Route path="*" element={<Error/>} />
       </Routes>
       <Footer />
-    </>
+    </HelmetProvider>
   );
 }
 
