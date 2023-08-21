@@ -5,11 +5,11 @@ import {
   selectAllSearchedRecipes,
   getSearchedRecipesStatus,
   getSearchedRecipesError,
-} from '../features/searchedRecipesSlice';
+} from '../../features/searchedRecipesSlice';
 
-import Title from "./Title";
-import Loading from "./Loading";
-import RecipeCard from "./RecipeCard"
+import Title from "../title/Title";
+import Loading from "../loading/Loading";
+import RecipeCard from "../recipe-card/RecipeCard"
 
 export default function Filteredrecipes() {
 

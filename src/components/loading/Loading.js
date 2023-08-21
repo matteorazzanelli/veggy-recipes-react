@@ -1,6 +1,6 @@
 import React from "react";
 
-import loadingGif from "../images/loader.gif";
+import loadingGif from "../../images/loader.gif";
 
 export default function Loading() {
   return (

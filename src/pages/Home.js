@@ -2,10 +2,10 @@ import React from 'react'
 
 import { Link } from 'react-router-dom'
 
-import Hero from '../components/Hero'
-import Banner from '../components/Banner'
-import Features from '../components/Features'
-import RandomRecipes from '../components/RandomRecipes'
+import Hero from '../components/hero/Hero'
+import Banner from '../components/banner/Banner'
+import Features from '../components/features/Features'
+import RandomRecipes from '../components/random-recipes/RandomRecipes'
 
 export default function Home() {
   return (

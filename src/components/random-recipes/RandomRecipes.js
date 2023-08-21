@@ -6,11 +6,11 @@ import {
   getRandomRecipesStatus,
   getRandomRecipesError,
   fetchRandomRecipes
- } from '../features/randomRecipesSlice';
+ } from '../../features/randomRecipesSlice';
 
-import Title from "./Title";
-import Loading from "./Loading";
-import RecipeCard from "./RecipeCard"
+import Title from "../title/Title";
+import Loading from "../loading/Loading";
+import RecipeCard from "../recipe-card/RecipeCard"
 
 export default function RandomRecipes() {
 

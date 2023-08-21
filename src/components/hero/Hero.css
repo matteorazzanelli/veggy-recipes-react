@@ -1,0 +1,9 @@
+/*Header*/
+.defaultHero {
+  min-height: 90vh;
+  background: url("../../images/defaultImg.jpg") center/cover no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+/* end of Header */

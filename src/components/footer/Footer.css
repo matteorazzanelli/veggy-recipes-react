@@ -1,0 +1,14 @@
+/* Footer */
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  background: var(--mainBlack);
+  padding: 10px 20px;
+
+  color: #fff;
+  text-align: center;
+  font-size: 0.7em;
+}
+/* end Footer */

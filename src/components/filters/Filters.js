@@ -5,7 +5,9 @@ import {
   selectAllOptionsRecipes,
   addFilters,
   fetchSearchedRecipes
-} from '../features/searchedRecipesSlice';
+} from '../../features/searchedRecipesSlice';
+
+import './Filters.css'
 
 import { LuSearch } from 'react-icons/lu';
 
