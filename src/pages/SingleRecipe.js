@@ -6,7 +6,6 @@ import { selectAllRandomRecipes } from '../features/randomRecipesSlice';
 import { selectAllSearchedRecipes } from "../features/searchedRecipesSlice";
 
 import Error from "./Error";
-import Loading from "../components/Loading";
 
 import styled from "styled-components"
 
